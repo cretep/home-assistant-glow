@@ -23,25 +23,26 @@ esphome:
   name_add_mac_suffix: true
   min_version: 2024.6.0
   project:
-    name: "klaasnicolaas.home-assistant-glow"
+    name: "cretep.home-assistant-glow"
     version: "${project_version}"
 
 dashboard_import:
-  package_import_url: github://klaasnicolaas/home-assistant-glow/home-assistant-glow/esp32.yaml@main
+  package_import_url: github://cretep/home-assistant-glow/home-assistant-glow/esp32.yaml@develop
 
 esp32:
   board: esp32dev
   framework:
-    type: arduino
+    type: esp-idf
 
 packages:
   remote_package:
-    url: https://github.com/klaasnicolaas/home-assistant-glow/
-    ref: "4.2.3"
+    url: https://github.com/cretep/home-assistant-glow/
+    #ref: "4.2.3"
+    ref: develop
     files:
       - components/basis.yaml
-      - components/updates.yaml
-      - components/status_led.yaml
+      #- components/updates.yaml
+      #- components/status_led.yaml
       - components/pulse_meter.yaml
 
 # Enable logging
